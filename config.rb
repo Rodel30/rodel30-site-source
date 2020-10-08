@@ -20,6 +20,9 @@ configure :build do
   activate :relative_assets
 end
 
+page "/dominion-card-picker.html", :directory_index => false
+page "/torn-upgrade-calc.html", :directory_index => false
+
 helpers do
 
   def icon(icn)
