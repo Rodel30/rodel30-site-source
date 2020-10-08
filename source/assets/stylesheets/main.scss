@@ -1,0 +1,127 @@
+@import 'compass';
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
+@import url(http://fonts.googleapis.com/css?family=Ubuntu);
+@import url(http://fonts.googleapis.com/css?family=Capriola);
+
+$outerboarder: 2px solid white;
+
+html, body { height: 100%; padding:0; overflow: hidden; }
+
+body {
+	font-family: 'Capriola';
+	margin: 0;
+	background-size: auto 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+	@media all and (min-height: 1701px){
+		background-image: image-url('isaiah.2515.jpg');
+	}
+	@media all and (min-height: 1201px) and (max-height: 1700px){
+		background-image: image-url('isaiah.1700.jpg');
+	}
+	@media all and (min-height: 901px) and (max-height: 1200px){
+		background-image: image-url('isaiah.1200.jpg');
+	}
+	@media all and (min-height: 401px) and (max-height: 900px){
+		background-image: image-url('isaiah.900.jpg');
+	}
+	@media all and (max-height: 400px){
+		background-image: image-url('isaiah.400.jpg');
+	}
+
+	& > div {
+		@include box-sizing(border-box);
+		width: 100%;
+
+		&#header {
+			@include single-box-shadow(black, 0, -2px, 0, 0, 0);
+			background-color: rgba(255,255,255,0.75);
+			border-bottom: $outerboarder;
+			font-family: 'Ubuntu';
+			font-size: 50px;
+			height: 30%;
+			margin: 0;
+			padding: 10px 0px;
+			text-align: center;
+			position: relative;
+
+			#name {
+				margin: 0 auto;
+			}
+
+			.icons {
+				font-size: 0px;
+				display: inline-block;
+				margin: 0;
+				padding: 0;
+				position: relative;
+				top: -25px;
+
+				a, a:visited, a:hover {
+					text-decoration: none;
+					display: inline-block;
+					padding: 0;
+					margin: 0;
+					margin-left: 15px;
+
+					&:first-child {
+						margin-left: 0px;
+					}
+				}
+
+				a i:before{
+					font-size: 30px;
+					color: rgba(0, 0, 0, 0.7);
+				}
+
+				a:hover, a:hover i:before {
+					color: rgba(0, 0, 0, 0.9);
+				}
+
+				&.outside {
+					position: absolute;
+					top: 50%;
+					margin-top: -15px;
+
+					&#left-icons {
+						left: 15px;
+					}
+
+					&#right-icons {
+						right: 15px;
+					}
+				}
+			}
+		}
+
+		&#spacer {
+			height: 30%;
+		}
+
+		&#main {
+			@include single-box-shadow(black, 0, 2px, 0, 0, 0);
+			background-color: rgba(255,255,255,0.75);
+			border-top: $outerboarder;
+			padding: 20px;
+			height: 41%;
+			overflow: auto;
+
+			#text-wrap {
+				max-width: 600px;
+				margin: 0px auto;
+				text-align: center;
+
+				a, a:visited, a:active {
+					color: rgba(0, 0, 0, 0.7);
+				}
+
+				a:hover {
+					color: rgba(0, 0, 0, 0.9);
+				}
+			}
+		}
+	}
+
+}

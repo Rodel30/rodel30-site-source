@@ -19,3 +19,10 @@ end
 configure :build do
   activate :relative_assets
 end
+
+helpers do
+
+  def icon(icn)
+    "<i class='fa fa-#{icn}'></i>"
+  end
+end
