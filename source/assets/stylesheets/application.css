@@ -1,13 +1,131 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the top of the
- * compiled file, but it's generally better to create a new file per style scope.
- *
- *= require_self
- *= require_tree .
- */
+@import url(http://fonts.googleapis.com/css?family=Ubuntu);
+@import url(http://fonts.googleapis.com/css?family=Capriola);
+
+html, body { height: 100%; padding:0; overflow: hidden; }
+
+body {
+  font-family: 'Capriola';
+  margin: 0;
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+@media all and (min-height: 1701px) {
+  body {
+    background-image: url(../images/isaiah.2515.jpg);
+  }
+}
+
+@media all and (min-height: 1201px) and (max-height: 1700px) {
+  body {
+    background-image: url(../images/isaiah.1700.jpg);
+  }
+}
+
+@media all and (min-height: 901px) and (max-height: 1200px) {
+  body {
+    background-image: url(../images/isaiah.1200.jpg);
+  }
+}
+
+@media all and (min-height: 401px) and (max-height: 900px) {
+  body {
+    background-image: url(../images/isaiah.900.jpg);
+  }
+}
+
+@media all and (max-height: 400px) {
+  body {
+    background-image: url(../images/isaiah.400.jpg);
+  }
+}
+
+body > div {
+  box-sizing: border-box;
+  width: 100%;
+}
+
+body > div#header {
+  box-shadow: inset 0 -2px 0 0 black;
+  background-color: rgba(255, 255, 255, 0.75);
+  border-bottom: 2px solid white;
+  font-family: 'Ubuntu';
+  font-size: 50px;
+  height: 30%;
+  margin: 0;
+  padding: 10px 0px;
+  text-align: center;
+  position: relative;
+}
+body > div#header #name {
+  margin: 0 auto;
+}
+body > div#header .icons {
+  font-size: 0px;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  top: -25px;
+}
+body > div#header .icons a, body > div#header .icons a:visited, body > div#header .icons a:hover {
+  text-decoration: none;
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+  margin-left: 15px;
+}
+body > div#header .icons a:first-child, body > div#header .icons a:visited:first-child, body > div#header .icons a:hover:first-child {
+  margin-left: 0px;
+}
+body > div#header .icons a i:before {
+  font-size: 30px;
+  color: rgba(0, 0, 0, 0.7);
+}
+body > div#header .icons a:hover, body > div#header .icons a:hover i:before {
+  color: rgba(0, 0, 0, 0.9);
+}
+body > div#header .icons.outside {
+  position: absolute;
+  top: 50%;
+  margin-top: -15px;
+}
+body > div#header .icons.outside#left-icons {
+  left: 15px;
+}
+body > div#header .icons.outside#right-icons {
+  right: 15px;
+}
+body > div#spacer {
+  height: 30%;
+}
+body > div#main {
+  box-shadow: inset 0 2px 0 0 black;
+  background-color: rgba(255, 255, 255, 0.75);
+  border-top: 2px solid white;
+  padding: 20px;
+  height: 41%;
+  overflow: auto;
+}
+body > div#main #text-wrap {
+  max-width: 600px;
+  margin: 0px auto;
+  text-align: center;
+}
+body > div#main #text-wrap a, body > div#main #text-wrap a:visited, body > div#main #text-wrap a:active {
+  color: rgba(0, 0, 0, 0.7);
+}
+body > div#main #text-wrap a:hover {
+  color: rgba(0, 0, 0, 0.9);
+}
+
+body > div#header .icons a i.fa-hammer:before {
+  color: white;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 4px;
+  font-size: 18px;
+  padding: 4px;
+  top: -4px;
+  position: relative;
+}
